@@ -24,7 +24,7 @@ val MIGRATION_1_2 = object:Migration(1,2){
         )
 
         database.execSQL(
-            "INSERT INTO todo(title, notes, priority) VALUES('Sample', 'Sample notes'm '3')")
+            "INSERT INTO todo(title, notes, priority) VALUES('Sample', 'Sample notes', 3)")
     }
 
 }
