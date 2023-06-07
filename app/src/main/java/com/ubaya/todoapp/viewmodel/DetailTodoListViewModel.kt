@@ -39,7 +39,7 @@ class DetailTodoListViewModel(application: Application):AndroidViewModel(applica
         }
     }
 
-    fun update(title: String, notes: String, priority:Int, is_done:Int, uuid:Int){
+    fun update(title: String, notes: String, priority:Int, uuid:Int, is_done:Int){
         launch {
             val db = buildDb(getApplication())
             db.todoDao().update(title, notes, priority, uuid, is_done)
