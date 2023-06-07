@@ -43,7 +43,8 @@ class CreateTodoFragment : Fragment() {
             val todo = Todo(
                 txtTitle.text.toString(),
                 txtNotes.text.toString(),
-                radio.tag.toString().toInt()
+                radio.tag.toString().toInt(),
+                0
             )
 
             viewModel.addTodo(todo)

@@ -41,7 +41,8 @@ class ListTodoViewModel(application: Application):AndroidViewModel(application),
 //            db.todoDao().deleteTodo(todo)
             val db = buildDb(getApplication())
 
-            db.todoDao().deleteTodo(todo)
+//            db.todoDao().deleteTodo(todo)
+            db.todoDao().update(todo.title,todo.notes, todo.priority, 1, todo.uuid)
             todoLD.postValue(db.todoDao().selectAllTodo())
         }
     }
